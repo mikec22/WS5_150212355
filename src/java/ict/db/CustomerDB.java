@@ -5,12 +5,9 @@
  */
 package ict.db;
 
-import java.sql.Statement;
+import java.sql.*;
 import java.io.IOException;
 import java.io.Serializable;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 
 /**
  *
@@ -43,7 +40,7 @@ public class CustomerDB implements Serializable {
         try {
             cnnct = getConnection();
             stmnt = cnnct.createStatement();
-            String sql = "CREATE TABLe IF NOT EXISTS customer ("
+            String sql = "CREATE TABLE IF NOT EXISTS customer ("
                     + "custID varchar(5) NOT NULL,"
                     + "name varchar(25) NOT NULL,"
                     + "tel varchar(10) NOT NULL,"

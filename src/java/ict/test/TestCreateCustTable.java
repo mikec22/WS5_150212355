@@ -12,7 +12,8 @@ import ict.db.CustomerDB;
  * @author Xuan
  */
 public class TestCreateCustTable {
-    public static void main(String [] arg) {
+
+    public static void main(String[] arg) {
         String url = "jdbc:mysql://localhost:3306/ITP4912_DB";
         String username = "root";
         String password = "root";
