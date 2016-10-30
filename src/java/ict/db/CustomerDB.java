@@ -54,9 +54,12 @@ public class CustomerDB implements Serializable {
             stmnt.close();
             cnnct.close();
         } catch (SQLException ex) {
-
-        } catch (IOException ex){
-            
+            while (ex != null) {
+                ex.printStackTrace();
+                ex = ex.getNextException();
+            }
+        } catch (IOException ex) {
+            ex.printStackTrace();
         }
     }
 }
