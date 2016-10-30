@@ -9,15 +9,17 @@ import ict.db.CustomerDB;
 
 /**
  *
- * @author Xuan
+ * @author Mike
  */
-public class TestCreateCustTable {
+public class TestAddRecord {
 
     public static void main(String[] arg) {
         String url = "jdbc:mysql://localhost:3306/ITP4912_DB";
         String username = "root";
         String password = "";
         CustomerDB custDb = new CustomerDB(url, username, password);
-        custDb.createCustTable();
+        custDb.addRecord("1", "Peter", "12345688", 18);
+        custDb.addRecord("2", "Nancy", "12345678", 21);
     }
+
 }
